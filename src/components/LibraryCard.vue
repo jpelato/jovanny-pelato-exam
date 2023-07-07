@@ -1,5 +1,5 @@
 <template>
-	<v-card elevation="10" class="pa-5">
+	<v-card elevation="10" class="pa-5" @click="$emit('getChannelVideo',videoObject)">
 		<div class="d-inline-flex justify-space-between">
 			<v-avatar size="200" rounded="1">
 				<v-img cover :src="videoObject.thumbnails.medium.url" />

@@ -24,7 +24,7 @@ function getBy($table,$condition){
     $sql = 'SELECT * FROM '.$table.' WHERE '.$condition;
     $con = connect();
     $exe = $con->query($sql);
-    $result = $exe->num_rows > 0 ? $exe->fetch_assoc() : '0 results';
+    $result = $exe->num_rows > 0 ? $exe->fetch_all(MYSQLI_ASSOC) : '0 results';
     $con->close();
     echo json_encode($result);
 }
@@ -65,6 +65,5 @@ function delete($table,$condition){
     $sql = 'DELETE FROM '.$table.' WHERE '.$condition;
     $con = connect();
     $exe = $con->query($sql);
-    echo 'Successfully Deleted';
     $con->close();
 }
