@@ -14,6 +14,7 @@
 </template>
 <script>
 	export default {
+		emits: ['getChannelVideo'],
 		props:{
 			videoObject:{
 				type: Object,

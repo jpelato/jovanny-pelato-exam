@@ -19,7 +19,7 @@ const vuetify = createVuetify({
     defaultSet: 'mdi',
   },
 })
-axios.defaults.baseURL = 'http://localhost/tech-exam/controllers';
+axios.defaults.baseURL = 'http://localhost/jovanny-pelato-exam/controllers';
 createApp(App)
 .use(vuetify)
 .use(VueAxios, axios)
